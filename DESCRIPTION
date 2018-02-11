@@ -1,7 +1,7 @@
 Package: sib2r
 Version: 0.0.0.9000
 Title: A multi-OS and stand-alone implementation of the SiB2 model.
-Description: A R interface to the Simple Biosphere Model 2.0.
+Description: A R interface to the Simple Biosphere Model 2.0 (SiB2). This a simple R Wrapper for the Fortran code of SiB2 model. 
 Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
 License: What license is it under?
 Encoding: UTF-8
