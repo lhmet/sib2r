@@ -45,7 +45,7 @@
 #' sib_run <- c(
 #'    date1 = 1960111601,
 #'    date2 = 1961123024,
-#'    nlai = 65,
+#'    lai.max = 6.5,
 #'    aeromet = 1,
 #'    isnow = 0,
 #'    ipbl = 1,
@@ -154,6 +154,10 @@ call_sib2 <-
     n2 <- nchar(out.dir)
     n3 <- nchar(id.sim)
     
+    # max leaf area index, for derive_trans
+    sib_run["lai.max"] <- pmin(sib_run["lai.max"], 10)
+    sib_run["lai.max"] <- sib_run["lai.max"] * 10
+
     # Call the SiB2 model
     sib2_output <- .Fortran(
       "sib2_offline_lib",
@@ -177,8 +181,12 @@ call_sib2 <-
     )
     if (file.exists(out_file)) {
       if (verbose) {
-        size_file <- round(file.info(out_file)$size/1e6, 2)
-        message("Output file save:", paste0(out_file, "\n", size_file))
+        size_file <- structure(file.info(out_file)$size, class = "object_size")
+        size_file <- format(size_file, units = "auto")
+        message(
+          "Output file saved:", "\n", 
+          paste0(out_file, "\n", "size: ", size_file, "\n")
+        )
         rm(size_file)
       }
       return(out_file)
