@@ -155,8 +155,8 @@ call_sib2 <-
     n3 <- nchar(id.sim)
     
     # max leaf area index, for derive_trans
-    sib_run["lai.max"] <- pmin(sib_run["lai.max"], 10)
-    sib_run["lai.max"] <- sib_run["lai.max"] * 10
+    sib_run["lai.max"] <- pmin(sib_run["lai.max"], 10) 
+    sib_run["lai.max"] <- sib_run["lai.max"] * 10 #(default 65)
 
     # Call the SiB2 model
     sib2_output <- .Fortran(
