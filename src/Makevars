@@ -1,3 +1,0 @@
-#SRCS = comsibc_h.f90 pardif_h.f90 cal2jul.f90 derive_trans_new.f aero.f90 momopt_stockli.f90 SIB2sub.f90 sib2_offline_lib.f90
-#MAKEFLAGS="FCFLAGS=-ffixed-line-length-none\ -freal-4-real-8\ -O2 FFLAGS=-ffixed-line-length-none\ -freal-4-real-8\ -O2 FLIBS= LIBR0= LIBR1= LIBR="  R CMD SHLIB $(SOURCES)
-#MAKEFLAGS="FCFLAGS=-ffixed-line-length-none\ -freal-4-real-8\ -O2 FFLAGS=-ffixed-line-length-none\ -freal-4-real-8\ -O2 FLIBS= LIBR0= LIBR1= LIBR=" R CMD SHLIB comsibc_h.f90 pardif_h.f90 cal2jul.f90 derive_trans_new.f aero.f90 momopt_stockli.f90 SIB2sub.f90 sib2_offline_lib.f90
