@@ -1,0 +1,3 @@
+SOURCE=
+
+MAKEFLAGS="FCFLAGS=-ffixed-line-length-none\ -freal-4-real-8\ -O2 FFLAGS=-ffixed-line-length-none\ -freal-4-real-8\ -O2 FLIBS= LIBR0= LIBR1= LIBR="  R CMD SHLIB -o libsib2_r.so $(SOURCE)
