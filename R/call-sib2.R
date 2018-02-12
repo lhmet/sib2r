@@ -159,19 +159,19 @@ call_sib2 <-
       as.double(physio.pars),
       as.double(veg.pars)
     )
-
-    out_file <- file.path(
-      normalizePath(out.dir),
-      paste0("sib2diag", id.sim, ".txt")
-    )
-    if(file.exists(out_file)) {
-      if(verbose){
-        size_file <- round(file.info(out_file)$size/1e6, 2)
-        message("Output file save:", paste0(out_file, "\n", size_file))
-        rm(size_file)
-      }
-      return(out_file)
-    }
-    warning( paste0("File: \n", out_file, "\not found.") )
-    return(NA_character_)
+    sib2_output
+    # out_file <- file.path(
+    #   normalizePath(out.dir),
+    #   paste0("sib2diag", id.sim, ".txt")
+    # )
+    # if(file.exists(out_file)) {
+    #   if(verbose){
+    #     size_file <- round(file.info(out_file)$size/1e6, 2)
+    #     message("Output file save:", paste0(out_file, "\n", size_file))
+    #     rm(size_file)
+    #   }
+    #   return(out_file)
+    # }
+    # warning( paste0("File: \n", out_file, "\not found.") )
+    # return(NA_character_)
   }
