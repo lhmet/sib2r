@@ -29,6 +29,104 @@
 #' @export
 #'
 #' @examples
+#' input <- system.file("extdata", "data2", package = "sib2r")
+#' input
+#' sib_run <- c(
+#'    date1 = 1960111601,
+#'    date2 = 1961123024,
+#'    nlai = 65,
+#'    aeromet = 1,
+#'    isnow = 0,
+#'    ipbl = 1,
+#'    ilw = 3,
+#'    itrunk = 20,
+#'    ivtype = 6,
+#'    istype = 3,
+#'    idirr = 0
+#')
+#'sib_ini <- c(
+#'    zlat = -20.5,
+#'    zwind = 45.0,
+#'    zmet = 45.0,
+#'    dtt = 3600.0,
+#'    tc = 298.0,
+#'    tg = 298.0,
+#'    td = 297.0,
+#'    gwdep = 0.0,
+#'    gmudmu = 1.0,
+#'    app = 0.0001,
+#'    bpp = 20.0,
+#'    cpp = 0.9999,
+#'    capac = c(0.0, 0.0),
+#'    snoww = c(0.0, 0.0),
+#'    www = c(0.75, 0.85, 0.98)
+#')
+#'sib_soil <- c(
+#'    bee = 7.797,
+#'    decay = 0.85,
+#'    poros = 0.458,
+#'    phsat = -0.2,
+#'    satco = 3.5E-06,
+#'    slpp = 0.0
+#')
+#' sib_morpho <- c(
+#'     zs = 0.05,
+#'     dsfc = 0.02,
+#'     g1 = 1.449,
+#'     ztz0 = 11.785,
+#'     sodep = 2.0,
+#'     slope = 0.08
+#')
+#'sib_physio <- c(
+#'    shti = 0.3,
+#'    slti = 0.2,
+#'    trda = 1.3,
+#'    trdm = 328.0,
+#'    trop = 298.0,
+#'    btheta = 0.95
+#')
+#'sib_parms <- c(
+#'    z1 = 0.3,
+#'    z2 = 1.2,
+#'    zc = 0.6,
+#'    chil = -0.3,
+#'    leafw = 0.01,
+#'    leafl = 0.3,
+#'    vcover = 0.95,
+#'    rootd = 1.0,
+#'    phc = -200.0,
+#'    tranlv = 0.07,
+#'    tranln = 0.25,
+#'    trandv = 0.22,
+#'    trandn = 0.38,
+#'    reflv = 0.11,
+#'    refln = 0.58,
+#'    refdv = 0.36,
+#'    refdn = 0.58,
+#'    sorefv = 0.12,
+#'    sorefn = 0.20,
+#'    effcon = 0.05,
+#'    gradm = 4.0,
+#'    binter = 0.04,
+#'    respcp = 0.02,
+#'    atheta = 0.95,
+#'    hlti = 290.16,
+#'    hhti = 313.16,
+#'    vmax0 = 3.0e-5
+#')
+#' out <- call_sib2(
+#'    file = input,
+#'    out.dir = normalizePath("~/Desktop/"),
+#'    id.sim = "_run1",
+#'    run.pars = sib_run,
+#'    ini.pars = sib_ini,
+#'    soil.pars = sib_soil,
+#'    morpho.pars = sib_morpho,
+#'    physio.pars = sib_physio,
+#'    veg.pars = sib_parms
+#' )
+#' out
+#' 
 call_sib2 <-
   function(file,
            out.dir,
