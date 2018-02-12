@@ -3,8 +3,8 @@ Version: 0.0.0.9000
 Title: A multi-OS and stand-alone implementation of the SiB2 model.
 Description: A R interface to the Simple Biosphere Model 2.0 (SiB2). This a simple R Wrapper for the Fortran code of SiB2 model. 
 Authors@R: c(
-    person("Jonatan", "Tatsch", "jdtatsch@gmail.com", c("aut", "cre")),
-    person("Nelson", "Navarrete", "nelsonvn@gmail.com", "aut")
+    person("Jonatan","Tatsch", , "jdtatsch@gmail.com", c("aut", "cre")),
+    person("Nelson", "Navarrete", , "nelsonvn@gmail.com", "aut")
     )
 License: BSD_3_clause + file LICENSE
 Encoding: UTF-8
