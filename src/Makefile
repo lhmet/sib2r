@@ -41,8 +41,8 @@ all:	$(OBJDIR) $(MODEL_OBJ)
 $(OBJDIR):
 	mkdir -p $(OBJDIR)
 
-#clean:
-#	rm -f $(MODDIR)/* $(OBJDIR)/* *.o *.mod
+clean:
+	rm -f $(MODDIR)/* $(OBJDIR)/* *.o *.mod
 
 #show:
 #	The following command show the model source code list
