@@ -15,17 +15,28 @@ call_sib2(file, out.dir, id.sim, run.pars, ini.pars, soil.pars, morpho.pars,
 \item{id.sim}{A character string to identify simulation (e.g. '_run1').}
 
 \item{run.pars}{A numeric vector with model setup parameters
-* `date1`: 1960111601
-* `date2` : 1961123024
-* `lai.max` : 65
-* `aeromet` : 1
-* `isnow` : 0
-* `ipbl` : 1
-* `ilw` : 3
-* `itrunk` : 20
-* `ivtype` : 6
-* `istype` : 3
-* `idirr` : 0}
+
+  * `date1`: 1960111601
+  
+  * `date2` : 1961123024
+  
+  * `lai.max` : 65
+  
+  * `aeromet` : 1
+  
+  * `isnow` : 0
+  
+  * `ipbl` : 1
+  
+  * `ilw` : 3
+  
+  * `itrunk` : 20
+  
+  * `ivtype` : 6
+  
+  * `istype` : 3
+  
+  * `idirr` : 0}
 
 \item{ini.pars}{initial conditions}
 
@@ -133,7 +144,7 @@ sib_parms <- c(
 )
 out <- call_sib2(
    file = input,
-   out.dir = normalizePath("~/Desktop/"),
+   out.dir = "./",
    id.sim = "_run1",
    run.pars = sib_run,
    ini.pars = sib_ini,
