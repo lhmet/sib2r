@@ -12,3 +12,4 @@ LazyData: true
 ByteCompile: true
 NeedsCompilation: yes
 RoxygenNote: 6.0.1.9000
+URL: https://github.com/lhmet/sib2r
