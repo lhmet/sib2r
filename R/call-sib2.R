@@ -4,18 +4,29 @@
 #' @param out.dir  A character string with the path where the output file ('sib2diag<id>.txt') is saved. 
 #' @param id.sim A character string to identify simulation (e.g. '_run1').
 #' @param run.pars A numeric vector with model setup parameters
+#'
 #'   * `date1`: 1960111601
+#'   
 #'   * `date2` : 1961123024
+#'   
 #'   * `lai.max` : 65
+#'   
 #'   * `aeromet` : 1
+#'   
 #'   * `isnow` : 0
+#'   
 #'   * `ipbl` : 1
+#'   
 #'   * `ilw` : 3
+#'   
 #'   * `itrunk` : 20
+#'   
 #'   * `ivtype` : 6
+#'   
 #'   * `istype` : 3
+#'   
 #'   * `idirr` : 0 
-#' 
+#'
 #' @param ini.pars initial conditions
 #' @param soil.pars soil parameters
 #' @param morpho.pars morphological parameters
@@ -116,7 +127,7 @@
 #')
 #' out <- call_sib2(
 #'    file = input,
-#'    out.dir = normalizePath("~/Desktop/"),
+#'    out.dir = "./",
 #'    id.sim = "_run1",
 #'    run.pars = sib_run,
 #'    ini.pars = sib_ini,
@@ -160,18 +171,18 @@ call_sib2 <-
       as.double(veg.pars)
     )
     sib2_output
-    # out_file <- file.path(
-    #   normalizePath(out.dir),
-    #   paste0("sib2diag", id.sim, ".txt")
-    # )
-    # if(file.exists(out_file)) {
-    #   if(verbose){
-    #     size_file <- round(file.info(out_file)$size/1e6, 2)
-    #     message("Output file save:", paste0(out_file, "\n", size_file))
-    #     rm(size_file)
-    #   }
-    #   return(out_file)
-    # }
-    # warning( paste0("File: \n", out_file, "\not found.") )
-    # return(NA_character_)
+    out_file <- file.path(
+      normalizePath(out.dir),
+      paste0("sib2diag", id.sim, ".txt")
+    )
+    if (file.exists(out_file)) {
+      if (verbose) {
+        size_file <- round(file.info(out_file)$size/1e6, 2)
+        message("Output file save:", paste0(out_file, "\n", size_file))
+        rm(size_file)
+      }
+      return(out_file)
+    }
+    warning( paste0("File: \n", out_file, "\not found.") )
+    return(NA_character_)
   }
