@@ -40,8 +40,8 @@ all:	$(OBJDIR) $(MODEL_OBJ)
 	$(FC) -shared -Wl,-z,relro -o sib2r.so $(OBJDIR)/*.o
 #	$(FC) $(FFLAGS) sib2_offline_lib_test.f90 -L. -lsib2_my -o sib2_offline_lib_test.out
 
-rlib:	
-	MAKEFLAGS="FCFLAGS=-ffixed-line-length-none\ -freal-4-real-8\ -O2 FFLAGS=-ffixed-line-length-none\ -freal-4-real-8\ -O2 FLIBS= LIBR0= LIBR1= LIBR="  R CMD SHLIB -o sib2r.so $(MODEL_SRC)
+#rlib:	
+#	MAKEFLAGS="FCFLAGS=-ffixed-line-length-none\ -freal-4-real-8\ -O2 FFLAGS=-ffixed-line-length-none\ -freal-4-real-8\ -O2 FLIBS= LIBR0= LIBR1= LIBR="  R CMD SHLIB -o sib2r.so $(MODEL_SRC)
 
 $(OBJDIR):
 	mkdir -p $(OBJDIR)
@@ -49,12 +49,12 @@ $(OBJDIR):
 clean:
 	rm -f $(MODDIR)/* $(OBJDIR)/* *.o *.mod
 
-show:
+#show:
 #	The following command show the model source code list
-	@echo $(MODEL_SRC)
+#	@echo $(MODEL_SRC)
 
-tar:
-	rm -f sib2_library.tar.bz2
-	tar -jcf sib2_library.tar.bz2 $(MODEL_SRC) sib2_offline_lib_test.f90 \
-	data2 sib2_library.par sib2_offline_lib.r sib2_offline_lib_test.r \
-	Makefile_libsib2 00README.TXT
+#tar:
+#	rm -f sib2_library.tar.bz2
+#	tar -jcf sib2_library.tar.bz2 $(MODEL_SRC) sib2_offline_lib_test.f90 \
+#	data2 sib2_library.par sib2_offline_lib.r sib2_offline_lib_test.r \
+#	Makefile_libsib2 00README.TXT
