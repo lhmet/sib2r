@@ -62,7 +62,7 @@ input
 sib_run <- c(
    date1 = 1960111601,
    date2 = 1961123024,
-   nlai = 65,
+   lai.max = 6.5,
    aeromet = 1,
    isnow = 0,
    ipbl = 1,
