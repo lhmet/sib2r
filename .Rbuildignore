@@ -1,2 +1,11 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^.*\.Rproj$
+^README\.Rmd$
+^NEWS\.Rmd$
+^sib2r\.Rproj$
+^.*\.csv$
+^.*\.txt$
+^\.travis\.yml$
+^data-raw$
+^release$
